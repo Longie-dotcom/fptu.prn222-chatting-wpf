@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="WPF.Component.EmojiTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <RichTextBox x:Name="rtbInput"
+                     AcceptsReturn="False"
+                     BorderThickness="0"
+                     Padding="0"
+                     Background="Transparent"
+                     VerticalAlignment="Center"
+                     VerticalScrollBarVisibility="Hidden">
+            <FlowDocument x:Name="flowDoc" />
+        </RichTextBox>
+    </Grid>
+</UserControl>

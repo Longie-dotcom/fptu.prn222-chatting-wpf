@@ -1,0 +1,68 @@
+# Environment and IDE
+.env
+.vsidx
+.vs/
+.vscode/
+*.sln.iml
+
+# Build results and output
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.user
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# Dump files and crash logs
+*.dmp
+*.dump
+*.stackdump
+*.wer
+*.cab
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Test results
+TestResults/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Local history for Visual Studio Code
+.history/
+
+# Misc
+*.log
+*.tmp
+*.bak
+*.swp
+~*
+.DS_Store
+Thumbs.db
+
+# Project specific
+appsettings.Development.json
+appsettings.Production.json
+.config/

@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="WPF.Component.PlayerTextbox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:WPF.Component"
+             HorizontalAlignment="Right"
+             MaxWidth="410"
+             SnapsToDevicePixels="True"
+             UseLayoutRounding="True">
+
+    <!-- ROOT -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Name -->
+            <RowDefinition Height="Auto"/>
+            <!-- Message -->
+            <RowDefinition Height="Auto"/>
+            <!-- Cat -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- Cat -->
+            <ColumnDefinition Width="Auto"/>
+            <!-- Bubbles -->
+        </Grid.ColumnDefinitions>
+
+        <!-- ================= NAME BUBBLE ================= -->
+        <Grid Grid.Row="0" Grid.Column="0"
+              HorizontalAlignment="Right"
+              Margin="0,0,0,8"
+              SnapsToDevicePixels="True">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="6"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="6"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Corners -->
+            <Image Grid.Row="0" Grid.Column="0" Source="/Asset/Component/PlayerName/player-name-tl.png"/>
+            <Image Grid.Row="0" Grid.Column="2" Source="/Asset/Component/PlayerName/player-name-tr.png"/>
+            <Image Grid.Row="2" Grid.Column="0" Source="/Asset/Component/PlayerName/player-name-bl.png"/>
+            <Image Grid.Row="2" Grid.Column="2" Source="/Asset/Component/PlayerName/player-name-br.png"/>
+
+            <!-- Edges -->
+            <Image Grid.Row="0" Grid.Column="1" Source="/Asset/Component/PlayerName/player-name-t.png" Stretch="Fill"/>
+            <Image Grid.Row="2" Grid.Column="1" Source="/Asset/Component/PlayerName/player-name-d.png" Stretch="Fill"/>
+            <Image Grid.Row="1" Grid.Column="0" Source="/Asset/Component/PlayerName/player-name-l.png" Stretch="Fill"/>
+            <Image Grid.Row="1" Grid.Column="2" Source="/Asset/Component/PlayerName/player-name-r.png" Stretch="Fill"/>
+
+            <!-- Body -->
+            <Image Grid.Row="1" Grid.Column="1"
+                   Source="/Asset/Component/PlayerName/player-name-body.png"
+                   Stretch="Fill"/>
+
+            <!-- Text -->
+            <TextBlock x:Name="UserName"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Margin="5,10,5,5"
+                       FontFamily="{StaticResource AppFont}"
+                       FontSize="16"
+                       Foreground="Black"
+                       TextWrapping="NoWrap"/>
+        </Grid>
+
+        <!-- ================= MESSAGE BUBBLE ================= -->
+        <Grid Grid.Row="1" Grid.Column="0"
+              HorizontalAlignment="Right"
+              SnapsToDevicePixels="True">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="16"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="16"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Corners -->
+            <Image Grid.Row="0" Grid.Column="0" Source="/Asset/Component/PlayerTextBox/player-tl.png"/>
+            <Image Grid.Row="0" Grid.Column="2" Source="/Asset/Component/PlayerTextBox/player-tr.png"/>
+            <Image Grid.Row="2" Grid.Column="0" Source="/Asset/Component/PlayerTextBox/player-bl.png"/>
+            <Image Grid.Row="2" Grid.Column="2" Source="/Asset/Component/PlayerTextBox/player-br.png"/>
+
+            <!-- Edges -->
+            <Image Grid.Row="0" Grid.Column="1" Source="/Asset/Component/PlayerTextBox/player-t.png" Stretch="Fill"/>
+            <Image Grid.Row="2" Grid.Column="1" Source="/Asset/Component/PlayerTextBox/player-d.png" Stretch="Fill"/>
+            <Image Grid.Row="1" Grid.Column="0" Source="/Asset/Component/PlayerTextBox/player-l.png" Stretch="Fill"/>
+            <Image Grid.Row="1" Grid.Column="2" Source="/Asset/Component/PlayerTextBox/player-r.png" Stretch="Fill"/>
+
+            <!-- Body -->
+            <Image Grid.Row="1" Grid.Column="1"
+                   Source="/Asset/Component/PlayerTextBox/player-body.png"
+                   Stretch="Fill"/>
+
+            <!-- Text -->
+            <local:EmojiTextBox x:Name="ChatMessage"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="8"
+                    WordWrap="True" 
+                    FontFamily="{StaticResource AppFont}"
+                    IsReadOnly="True"
+                    MaxWidth="300"
+                    FontSize="16"
+                    ForeColor="Black"
+                    HorizontalAlignment="Left"/>
+        </Grid>
+
+        <!-- ================= CAT ================= -->
+        <Image Grid.Row="2" Grid.Column="1"
+               Source="/Asset/Component/PlayerTextBox/player-cat.png"
+               Width="32"
+               Height="32"
+               Margin="4"
+               VerticalAlignment="Bottom"
+               SnapsToDevicePixels="True"/>
+    </Grid>
+</UserControl>

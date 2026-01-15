@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WPF.Component.SpriteButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Button x:Name="Button"
+            Width="{Binding ButtonWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Height="{Binding ButtonHeight, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Cursor="Hand">
+        <Button.Template>
+            <ControlTemplate TargetType="Button">
+                <Grid Background="{TemplateBinding Background}">
+                    <ContentPresenter HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center"/>
+                </Grid>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+</UserControl>

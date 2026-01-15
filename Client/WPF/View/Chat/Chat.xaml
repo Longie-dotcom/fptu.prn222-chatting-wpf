@@ -1,0 +1,96 @@
+﻿<Window x:Class="WPF.View.Chat.Chat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:WPF.Component"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Width="512"
+        Height="544"
+        SnapsToDevicePixels="True"
+        UseLayoutRounding="True">
+
+    <Grid SnapsToDevicePixels="True" UseLayoutRounding="True" Name="RootGrid">
+        <!-- Pixel-perfect background -->
+        <Image Source="/Asset/Frame/chatbox-frame.png"
+               Width="512"
+               Height="544"
+               Stretch="None"
+               SnapsToDevicePixels="True"
+               RenderOptions.BitmapScalingMode="NearestNeighbor"
+               RenderOptions.EdgeMode="Aliased"/>
+
+        <TextBlock x:Name="TitleName"
+           Width="100"
+           Height="30"
+           Text="BlueCat"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top"
+           Margin="22,20,0,0"
+           TextWrapping="Wrap"
+           Foreground="Blue"
+           Background="Transparent"
+           FontFamily="{StaticResource AppFont}"
+           FontSize="16" />
+
+        <TextBlock x:Name="TitleText"
+           Width="203"
+           Height="30"
+           Text="Console"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top"
+           Margin="117,20,0,0"
+           TextWrapping="Wrap"
+           Foreground="Black"
+           Background="Transparent"
+           FontFamily="{StaticResource AppFont}"
+           FontSize="16" />
+
+        <controls:EmojiTextBox x:Name="ChatInput"
+                       Width="266"
+                       Height="32"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       Margin="22,0,0,78"
+                       FontSize="16"
+                       FontFamily="{StaticResource AppFont}"
+                       Foreground="Black" />
+
+        <!-- Chat messages area -->
+        <Border Margin="22,60,22,120" Background="Transparent">
+            <ScrollViewer x:Name="ChatScrollViewer"
+                  VerticalScrollBarVisibility="Hidden"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Margin="0,0,0,10"
+                  PanningMode="VerticalOnly">
+                <StackPanel x:Name="ChatPanel"
+                    Orientation="Vertical" />
+            </ScrollViewer>
+        </Border>
+
+        <!-- Buttons container -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="202" Margin="300,0,0,74">
+            <controls:SpriteButton x:Name="SendButton" ButtonWidth="46" ButtonHeight="46" Margin="0,0,0,0"
+                           NormalPath="Asset/Component/SendButton/send-button1.png"
+                           HoverPath="Asset/Component/SendButton/send-button2.png"
+                           PressedPath="Asset/Component/SendButton/send-button3.png" />
+
+            <controls:SpriteButton x:Name="UploadImageButton" ButtonWidth="46" ButtonHeight="46" Margin="6,0,0,0"
+                           NormalPath="Asset/Component/UploadImageButton/upload-image-button1.png"
+                           HoverPath="Asset/Component/UploadImageButton/upload-image-button2.png"
+                           PressedPath="Asset/Component/UploadImageButton/upload-image-button3.png" />
+
+            <controls:SpriteButton x:Name="UploadFileButton" ButtonWidth="46" ButtonHeight="46" Margin="6,0,0,0"
+                           NormalPath="Asset/Component/UploadFileButton/upload-file-button1.png"
+                           HoverPath="Asset/Component/UploadFileButton/upload-file-button2.png"
+                           PressedPath="Asset/Component/UploadFileButton/upload-file-button3.png" />
+
+            <controls:SpriteButton x:Name="EmoteButton" ButtonWidth="46" ButtonHeight="46" Margin="6,0,0,0"
+                           NormalPath="Asset/Component/EmoteButton/emote-button1.png"
+                           HoverPath="Asset/Component/EmoteButton/emote-button2.png"
+                           PressedPath="Asset/Component/EmoteButton/emote-button3.png" />
+        </StackPanel>
+    </Grid>
+</Window>

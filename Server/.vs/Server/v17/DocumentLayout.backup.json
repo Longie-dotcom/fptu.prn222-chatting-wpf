@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\model\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\model\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\runtime\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\runtime\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\hub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\hub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 760,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Runtime\\UserSession.cs",
+              "RelativeDocumentMoniker": "Hub\\Runtime\\UserSession.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Runtime\\UserSession.cs",
+              "RelativeToolTip": "Hub\\Runtime\\UserSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T01:28:29.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hub.csproj",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Hub.csproj",
+              "RelativeDocumentMoniker": "Hub\\Hub.csproj",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Hub.csproj",
+              "RelativeToolTip": "Hub\\Hub.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-14T17:46:11.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatMessage.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Model\\ChatMessage.cs",
+              "RelativeDocumentMoniker": "Hub\\Model\\ChatMessage.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Model\\ChatMessage.cs",
+              "RelativeToolTip": "Hub\\Model\\ChatMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T17:45:02.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Program.cs",
+              "RelativeDocumentMoniker": "Hub\\Program.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Program.cs",
+              "RelativeToolTip": "Hub\\Program.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAwNQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T17:43:24.863Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 654,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

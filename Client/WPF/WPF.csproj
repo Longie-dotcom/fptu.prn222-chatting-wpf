@@ -1,0 +1,292 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Asset\Component\CloseButton\close-button1.png" />
+    <None Remove="Asset\Component\CloseButton\close-button2.png" />
+    <None Remove="Asset\Component\CloseButton\close-button3.png" />
+    <None Remove="Asset\Component\Emoji\iron-sword.png" />
+    <None Remove="Asset\Component\Emoji\mushroom.png" />
+    <None Remove="Asset\Component\Emoji\stone.png" />
+    <None Remove="Asset\Component\Emoji\wood.png" />
+    <None Remove="Asset\Component\Emoji\wooden-sword.png" />
+    <None Remove="Asset\Component\EmoteButton\emote-button1.png" />
+    <None Remove="Asset\Component\EmoteButton\emote-button2.png" />
+    <None Remove="Asset\Component\EmoteButton\emote-button3.png" />
+    <None Remove="Asset\Component\ExitButton\exit-button1.png" />
+    <None Remove="Asset\Component\ExitButton\exit-button2.png" />
+    <None Remove="Asset\Component\ExitButton\exit-button3.png" />
+    <None Remove="Asset\Component\LoginButton\login-button1.png" />
+    <None Remove="Asset\Component\LoginButton\login-button2.png" />
+    <None Remove="Asset\Component\LoginButton\login-button3.png" />
+    <None Remove="Asset\Component\OtherName\other-name-bl.png" />
+    <None Remove="Asset\Component\OtherName\other-name-body.png" />
+    <None Remove="Asset\Component\OtherName\other-name-br.png" />
+    <None Remove="Asset\Component\OtherName\other-name-d.png" />
+    <None Remove="Asset\Component\OtherName\other-name-l.png" />
+    <None Remove="Asset\Component\OtherName\other-name-r.png" />
+    <None Remove="Asset\Component\OtherName\other-name-t.png" />
+    <None Remove="Asset\Component\OtherName\other-name-tl.png" />
+    <None Remove="Asset\Component\OtherName\other-name-tr.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-bl.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-body.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-br.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-cat.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-d.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-l.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-r.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-t.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-tl.png" />
+    <None Remove="Asset\Component\OtherTextbox\other-tr.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-bl.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-body.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-br.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-d.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-l.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-r.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-t.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-tl.png" />
+    <None Remove="Asset\Component\PlayerName\player-name-tr.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-bl.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-body.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-br.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-cat.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-d.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-l.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-r.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-t.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-tl.png" />
+    <None Remove="Asset\Component\PlayerTextbox\player-tr.png" />
+    <None Remove="Asset\Component\SendButton\send-button1.png" />
+    <None Remove="Asset\Component\SendButton\send-button2.png" />
+    <None Remove="Asset\Component\SendButton\send-button3.png" />
+    <None Remove="Asset\Component\UploadFileButton\upload-file-button1.png" />
+    <None Remove="Asset\Component\UploadFileButton\upload-file-button2.png" />
+    <None Remove="Asset\Component\UploadFileButton\upload-file-button3.png" />
+    <None Remove="Asset\Component\UploadImageButton\upload-image-button1.png" />
+    <None Remove="Asset\Component\UploadImageButton\upload-image-button2.png" />
+    <None Remove="Asset\Component\UploadImageButton\upload-image-button3.png" />
+    <None Remove="Asset\Font\PlainWorld.ttf" />
+    <None Remove="Asset\Frame\chatbox-frame.png" />
+    <None Remove="Asset\Frame\lobby-frame.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Network.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Asset\Component\CloseButton\close-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\CloseButton\close-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\CloseButton\close-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Asset\Component\Emoji\iron-sword.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\Emoji\mushroom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\Emoji\stone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\Emoji\wood.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\Emoji\wooden-sword.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Asset\Component\EmoteButton\emote-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\EmoteButton\emote-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\EmoteButton\emote-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\ExitButton\exit-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\ExitButton\exit-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\ExitButton\exit-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\LoginButton\login-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\LoginButton\login-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\LoginButton\login-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\SendButton\send-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\SendButton\send-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\SendButton\send-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\UploadFileButton\upload-file-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\UploadFileButton\upload-file-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\UploadFileButton\upload-file-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\UploadImageButton\upload-image-button1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\UploadImageButton\upload-image-button2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Component\UploadImageButton\upload-image-button3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Asset\Component\OtherName\other-name-bl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-body.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-br.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-l.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-r.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-t.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-tl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherName\other-name-tr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-bl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-body.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-br.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-l.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-r.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-t.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-tl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\OtherTextbox\other-tr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-bl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-body.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-br.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-l.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-r.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-t.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-tl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerName\player-name-tr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-bl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-body.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-br.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-l.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-r.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-t.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-tl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Component\PlayerTextbox\player-tr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Font\PlainWorld.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Frame\chatbox-frame.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Asset\Frame\lobby-frame.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
