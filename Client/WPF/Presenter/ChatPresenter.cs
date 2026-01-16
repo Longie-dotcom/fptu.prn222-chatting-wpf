@@ -1,7 +1,6 @@
 ﻿using Model;
 using Service.Interface;
 using WPF.View.Chat;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace WPF.Presenter
 {
@@ -20,6 +19,7 @@ namespace WPF.Presenter
             // Inbound
             chat.ViewLoaded += OnViewLoaded;
             chat.SendClicked += OnSendClicked;
+            chat.SendImageClicked += OnSendImage;
 
             // Outbound
             chatService.MessageReceived += OnMessageReceived;
@@ -44,6 +44,14 @@ namespace WPF.Presenter
                 return;
 
             chat.ReceiveMessage(message);
+        }
+
+        private async void OnSendImage(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                return;
+
+            await chatService.SendImageAsync(path);
         }
     }
 }

@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\controller\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\controller\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\application\\interface\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interface\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\infrastructure\\externalservice\\storage\\localimagestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\externalservice\\storage\\localimagestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\application\\interface\\iimagestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interface\\iimagestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\application\\service\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\service\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\runtime\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\runtime\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\model\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\model\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\runtime\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|solutionrelative:hub\\runtime\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\domain\\enum\\imagepurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enum\\imagepurpose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\application\\dto\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dto\\imagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\infrastructure\\infrastructureexception\\infrastructureexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructureexception\\infrastructureexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C9E21E6-C426-4B72-8F45-28F3F1285275}|Hub\\Hub.csproj|d:\\github\\fptu.prn222-chatting-wpf\\server\\hub\\hub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -26,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 760,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +74,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Controller\\ImageController.cs",
+              "RelativeDocumentMoniker": "Hub\\Controller\\ImageController.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Controller\\ImageController.cs",
+              "RelativeToolTip": "Hub\\Controller\\ImageController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:53:26.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationModule.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\ApplicationModule.cs",
+              "RelativeDocumentMoniker": "Application\\ApplicationModule.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\ApplicationModule.cs",
+              "RelativeToolTip": "Application\\ApplicationModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:52:03.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ImageService.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\Service\\ImageService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\ImageService.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\Service\\ImageService.cs",
+              "RelativeToolTip": "Application\\Service\\ImageService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwB0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:51:35.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IImageService.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\Interface\\IImageService.cs",
+              "RelativeDocumentMoniker": "Application\\Interface\\IImageService.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\Interface\\IImageService.cs",
+              "RelativeToolTip": "Application\\Interface\\IImageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:51:28.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IImageStorage.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\Interface\\IImageStorage.cs",
+              "RelativeDocumentMoniker": "Application\\Interface\\IImageStorage.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\Interface\\IImageStorage.cs",
+              "RelativeToolTip": "Application\\Interface\\IImageStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:51:05.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ImagePurpose.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Domain\\Enum\\ImagePurpose.cs",
+              "RelativeDocumentMoniker": "Domain\\Enum\\ImagePurpose.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Domain\\Enum\\ImagePurpose.cs",
+              "RelativeToolTip": "Domain\\Enum\\ImagePurpose.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:50:55.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ImageDTO.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\DTO\\ImageDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\ImageDTO.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Application\\DTO\\ImageDTO.cs",
+              "RelativeToolTip": "Application\\DTO\\ImageDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:50:49.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LocalImageStorage.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Infrastructure\\ExternalService\\Storage\\LocalImageStorage.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ExternalService\\Storage\\LocalImageStorage.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Infrastructure\\ExternalService\\Storage\\LocalImageStorage.cs",
+              "RelativeToolTip": "Infrastructure\\ExternalService\\Storage\\LocalImageStorage.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:50:29.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InfrastructureException.cs",
+              "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Infrastructure\\InfrastructureException\\InfrastructureException.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\InfrastructureException\\InfrastructureException.cs",
+              "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Infrastructure\\InfrastructureException\\InfrastructureException.cs",
+              "RelativeToolTip": "Infrastructure\\InfrastructureException\\InfrastructureException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T07:50:26.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserSession.cs",
               "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Runtime\\UserSession.cs",
               "RelativeDocumentMoniker": "Hub\\Runtime\\UserSession.cs",
@@ -50,19 +196,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Hub.csproj",
               "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Hub.csproj",
               "RelativeDocumentMoniker": "Hub\\Hub.csproj",
               "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Hub.csproj",
               "RelativeToolTip": "Hub\\Hub.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-01-14T17:46:11.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ChatMessage.cs",
               "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Model\\ChatMessage.cs",
               "RelativeDocumentMoniker": "Hub\\Model\\ChatMessage.cs",
@@ -70,21 +216,19 @@
               "RelativeToolTip": "Hub\\Model\\ChatMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T17:45:02.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T17:45:02.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Program.cs",
               "RelativeDocumentMoniker": "Hub\\Program.cs",
               "ToolTip": "D:\\GitHub\\fptu.prn222-chatting-wpf\\Server\\Hub\\Program.cs",
               "RelativeToolTip": "Hub\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADoAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T17:43:24.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T17:43:24.863Z"
             }
           ]
         },

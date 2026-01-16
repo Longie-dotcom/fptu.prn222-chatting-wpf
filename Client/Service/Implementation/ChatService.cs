@@ -40,6 +40,16 @@ namespace Service.Implementation
             };
         }
 
+        public async Task SendImageAsync(string filePath)
+        {
+            await chatCommand.SendImageAsync(filePath, SenderID);
+        }
+
+        public async Task SendMessageAsync(string message)
+        {
+            await chatCommand.SendMessageAsync(message, SenderID, MessageType.Message);
+        }
+
         private void HandleHandshake(ChatMessage msg)
         {
             SenderID = msg.SenderID;
@@ -50,11 +60,6 @@ namespace Service.Implementation
         {
             msg.IsOwner = msg.SenderID == SenderID;
             MessageReceived?.Invoke(msg);
-        }
-
-        public async Task SendMessageAsync(string message)
-        {
-            await chatCommand.SendMessageAsync(message, SenderID);
         }
     }
 }

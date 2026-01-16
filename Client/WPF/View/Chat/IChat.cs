@@ -6,6 +6,7 @@ namespace WPF.View.Chat
     {
         event Action ViewLoaded;
         event Action<string> SendClicked;
+        event Action<string> SendImageClicked;
 
         void ReceiveMessage(ChatMessage message);
     }

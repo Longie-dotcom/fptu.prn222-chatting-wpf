@@ -4,37 +4,38 @@ using Network.Interface.Receiver;
 
 namespace Network.Handler
 {
-    public class ChatHandler :
-        IChatCommand,
-        IChatReceiver
+    public class ChatHandler : IChatCommand, IChatReceiver
     {
-        private readonly Connection connection;
-
+        private readonly Connection _connection;
         public event Action<ChatMessage>? MessageReceived;
 
         public ChatHandler(Connection connection)
         {
-            this.connection = connection;
-
-            connection.MessageReceived += msg =>
-            {
-                MessageReceived?.Invoke(msg);
-            };
+            _connection = connection;
+            _connection.MessageReceived += msg => MessageReceived?.Invoke(msg);
         }
 
-        public async Task SendMessageAsync(string message, Guid senderId)
+        public async Task SendMessageAsync(string message, Guid senderId, MessageType type)
         {
-            // Map DTO
-            var chatMessage = new ChatMessage()
+            var chatMessage = new ChatMessage
             {
                 Message = message,
                 SenderID = senderId,
                 ChatMessageID = Guid.NewGuid(),
                 Time = DateTime.Now,
-                Type = MessageType.Message,
+                Type = type
             };
 
-            await connection.SendMessageAsync(chatMessage);
+            await _connection.SendMessageAsync(chatMessage);
+        }
+
+        public async Task SendImageAsync(string filePath, Guid senderId)
+        {
+            // Upload via HTTP
+            var url = await _connection.UploadImageAsync(filePath);
+
+            // Send the image URL as a WebSocket message
+            await SendMessageAsync(url, senderId, MessageType.Image);
         }
     }
 }

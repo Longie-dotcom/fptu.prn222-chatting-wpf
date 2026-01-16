@@ -1,13 +1,13 @@
+using Application.Interface;
+using Application.Service;
 using Hub.Model;
 using Hub.Runtime;
+using Infrastructure.ExternalService.Storage;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.FileProviders;
 using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
-
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
-app.UseWebSockets();
 
 var users = new List<UserSession>();
 var usersLock = new object();
@@ -15,6 +15,63 @@ var usersLock = new object();
 var messages = new List<ChatMessage>();
 var messagesLock = new object();
 
+var builder = WebApplication.CreateBuilder(args);
+
+// -----------------------------
+// Services
+// -----------------------------
+builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IImageStorage, LocalImageStorage>();
+builder.Services.AddCors();
+builder.Services.AddControllers();
+
+// Add Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// -----------------------------
+// Swagger
+// -----------------------------
+
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hub API V1");
+        c.RoutePrefix = "swagger"; // Swagger UI at http://localhost:5000/swagger
+    });
+
+
+// -----------------------------
+// Storage Configuration
+// -----------------------------
+var rootPath = builder.Configuration["Storage:RootPath"]!;
+if (!Directory.Exists(rootPath))
+{
+    Directory.CreateDirectory(rootPath);
+}
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(rootPath),
+    RequestPath = "/images"
+});
+
+// -----------------------------
+// WebSocket & CORS
+// -----------------------------
+app.UseWebSockets();
+app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+// -----------------------------
+// Map Controllers (ImageController)
+// -----------------------------
+app.MapControllers();
+
+// -----------------------------
+// Map WebSocket endpoint
+// -----------------------------
 app.Map("/ws", async context =>
 {
     if (!context.WebSockets.IsWebSocketRequest)
@@ -25,7 +82,6 @@ app.Map("/ws", async context =>
 
     var socket = await context.WebSockets.AcceptWebSocketAsync();
     var name = context.Request.Query["name"].ToString();
-
     var user = new UserSession(socket, name);
 
     lock (usersLock)
@@ -33,9 +89,6 @@ app.Map("/ws", async context =>
 
     Console.WriteLine($"[CONNECT] {user.Name} ({user.UserID})");
 
-    // ==========================
-    // SEND HANDSHAKE (ONLY TO THIS USER)
-    // ==========================
     await SendAsync(socket, new ChatMessage
     {
         ChatMessageID = Guid.NewGuid(),
@@ -45,9 +98,6 @@ app.Map("/ws", async context =>
         Time = DateTime.UtcNow
     });
 
-    // ==========================
-    // SEND CHAT HISTORY
-    // ==========================
     ChatMessage[] history;
     lock (messagesLock)
         history = messages.ToArray();
@@ -55,9 +105,6 @@ app.Map("/ws", async context =>
     foreach (var msg in history)
         await SendAsync(socket, msg);
 
-    // ==========================
-    // BROADCAST CONNECTED NOTIFICATION
-    // ==========================
     var connected = new ChatMessage
     {
         ChatMessageID = Guid.NewGuid(),
@@ -93,7 +140,6 @@ async Task ReceiveLoop(UserSession user)
             do
             {
                 result = await user.Socket.ReceiveAsync(buffer, CancellationToken.None);
-
                 if (result.MessageType == WebSocketMessageType.Close)
                     return;
 
@@ -103,17 +149,7 @@ async Task ReceiveLoop(UserSession user)
 
             var json = Encoding.UTF8.GetString(ms.ToArray());
 
-            ChatMessage? message;
-            try
-            {
-                message = JsonSerializer.Deserialize<ChatMessage>(json);
-            }
-            catch
-            {
-                continue;
-            }
-
-            if (message == null)
+            if (JsonSerializer.Deserialize<ChatMessage>(json) is not ChatMessage message)
                 continue;
 
             // SERVER AUTHORITATIVE
@@ -142,7 +178,6 @@ async Task ReceiveLoop(UserSession user)
         }
     }
 }
-
 
 // =======================================================
 // HELPERS
@@ -189,10 +224,5 @@ async Task BroadcastAsync(ChatMessage message)
 async Task SendAsync(WebSocket socket, ChatMessage message)
 {
     var bytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
-
-    await socket.SendAsync(
-        bytes,
-        WebSocketMessageType.Text,
-        true,
-        CancellationToken.None);
+    await socket.SendAsync(bytes, WebSocketMessageType.Text, true, CancellationToken.None);
 }

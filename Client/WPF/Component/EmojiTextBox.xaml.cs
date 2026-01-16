@@ -14,6 +14,16 @@ namespace WPF.Component
         // --- Emoji map ---
         private readonly Dictionary<string, string> emojiMap = new Dictionary<string, string>
         {
+            { ":emoji-normal:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame1.png" },
+            { ":emoji-happy:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame2.png" },
+            { ":emoji-sad:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame3.png" },
+            { ":emoji-disgusted:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame4.png" },
+            { ":emoji-angry:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame5.png" },
+            { ":emoji-cute:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame6.png" },
+            { ":emoji-dumb:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame7.png" },
+            { ":emoji-duh:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame8.png" },
+            { ":emoji-clown", "pack://application:,,,/Asset/Component/Emoji/emoji-frame9.png" },
+            { ":emoji-fish:", "pack://application:,,,/Asset/Component/Emoji/emoji-frame10.png" },
             { ":iron-sword:", "pack://application:,,,/Asset/Component/Emoji/iron-sword.png" },
             { ":wooden-sword:", "pack://application:,,,/Asset/Component/Emoji/wooden-sword.png" },
             { ":mushroom:", "pack://application:,,,/Asset/Component/Emoji/mushroom.png" },

@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  prn222-chatserver:
+    image: longdong123/prn222-chattingsocket:latest
+    container_name: prn222-chatserver
+    ports:
+      - "5000:8080"
+    volumes:
+      - media-data:/media
+    environment:
+      - Storage__RootPath=/media
+    networks:
+      - prn222
+
+volumes:
+  media-data:
+
+networks:
+  prn222:

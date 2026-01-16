@@ -27,7 +27,7 @@ namespace WPF.View.Lobby
 
             // Infrastructure
             var connection = new Connection(
-                $"ws://192.168.1.135:5000/ws?name={encodedName}");
+                $"ws://192.168.1.135:5000/ws?name={encodedName}", "http://192.168.1.135:5000/api/image/images");
 
             // Network
             var handler = new ChatHandler(connection);

@@ -1,6 +1,8 @@
-﻿using Model;
+﻿using Microsoft.Win32;
+using Model;
 using System.Diagnostics;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using WPF.Component;
@@ -11,6 +13,7 @@ namespace WPF.View.Chat
     public partial class Chat : Window, IChat
     {
         public event Action<string> SendClicked;
+        public event Action<string> SendImageClicked;
         public event Action ViewLoaded;
 
         public Chat()
@@ -23,7 +26,22 @@ namespace WPF.View.Chat
             UploadFileButton.Click += UploadFileButton_Click;
             EmoteButton.Click += EmoteButton_Click;
             ChatInput.OnEnterPressed += (s, e) => HandleSend();
+            SendButton.Click += (s, e) => HandleSend();
             RootGrid.MouseLeftButtonDown += GridRoot_MouseLeftButtonDown;
+
+            EmojiPickerControl.EmojiSelected += code =>
+            {
+                // Insert at the **caret position** instead of just appending
+                var rtb = ChatInput;
+                var caret = rtb.rtbInput.CaretPosition; // Access internal RichTextBox
+                if (caret != null)
+                {
+                    rtb.TextWithEmojiCodes = rtb.TextWithEmojiCodes.Insert(rtb.GetRawText().Length, code);
+                    rtb.SetTextWithEmojis(rtb.TextWithEmojiCodes);
+                }
+
+                EmojiPopup.IsOpen = false; // Close after selecting
+            };
         }
 
         public void ReceiveMessage(ChatMessage message)
@@ -34,43 +52,60 @@ namespace WPF.View.Chat
                 {
                     Text = $"{message.SenderName} has been connected",
                 };
-
                 ChatPanel.Children.Add(noti);
             }
             else
             {
+                UserControl msgControl;
+
                 if (message.IsOwner)
                 {
-                    var msg = new PlayerTextbox
+                    msgControl = new PlayerTextbox
                     {
-                        MessageText = message.Message,
                         NameText = message.SenderName,
-                        Margin = new Thickness(0, 4, 0, 4) // spacing between messages
+                        Margin = new Thickness(0, 4, 0, 4)
                     };
-
-                    ChatPanel.Children.Add(msg);
                 }
                 else
                 {
-                    var msg = new OtherTextbox
+                    msgControl = new OtherTextbox
                     {
-                        MessageText = message.Message,
                         NameText = message.SenderName,
-                        Margin = new Thickness(0, 4, 0, 4) // spacing between messages
+                        Margin = new Thickness(0, 4, 0, 4)
                     };
-
-                    ChatPanel.Children.Add(msg);
                 }
+
+                // Pass message content and type
+                if (msgControl is PlayerTextbox playerBox)
+                    playerBox.SetMessage(message.Message, message.Type);
+                else if (msgControl is OtherTextbox otherBox)
+                    otherBox.SetMessage(message.Message, message.Type);
+
+                ChatPanel.Children.Add(msgControl);
             }
 
-            // Scroll to bottom
             ChatScrollViewer.UpdateLayout();
             ChatScrollViewer.ScrollToBottom();
         }
 
         private void UploadImageButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Upload Image Clicked!");
+            // Create an OpenFileDialog
+            var dlg = new OpenFileDialog
+            {
+                Title = "Select an image",
+                Filter = "Image Files|*.png;*.jpg;*.jpeg;*.gif;*.bmp;*.webp",
+                Multiselect = false
+            };
+
+            bool? result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                string filePath = dlg.FileName;
+                // Raise the SendImageClicked event with the file path
+                SendImageClicked?.Invoke(filePath);
+            }
         }
         private void UploadFileButton_Click(object sender, RoutedEventArgs e)
         {
@@ -78,7 +113,7 @@ namespace WPF.View.Chat
         }
         private void EmoteButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Emote Button Clicked!");
+            EmojiPopup.IsOpen = !EmojiPopup.IsOpen; // toggle popup visibility
         }
 
         private void HandleSend()

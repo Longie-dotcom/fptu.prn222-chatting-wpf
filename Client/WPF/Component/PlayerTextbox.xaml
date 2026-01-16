@@ -105,17 +105,25 @@
                    Stretch="Fill"/>
 
             <!-- Text -->
-            <local:EmojiTextBox x:Name="ChatMessage"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Margin="8"
-                    WordWrap="True" 
-                    FontFamily="{StaticResource AppFont}"
-                    IsReadOnly="True"
-                    MaxWidth="300"
-                    FontSize="16"
-                    ForeColor="Black"
-                    HorizontalAlignment="Left"/>
+            <!-- Grid that can switch -->
+            <Grid x:Name="MessageContent" Grid.Row="1" Grid.Column="1" Margin="0,0,0,6">
+                <!-- Text message -->
+                <local:EmojiTextBox x:Name="ChatMessage"
+                        WordWrap="True" 
+                        FontFamily="{StaticResource AppFont}"
+                        IsReadOnly="True"
+                        MaxWidth="300"
+                        FontSize="16"
+                        ForeColor="Black"
+                        HorizontalAlignment="Left"/>
+
+                <!-- Image message -->
+                <Image x:Name="ChatImage"
+           MaxWidth="300"
+           MaxHeight="300"
+           Visibility="Collapsed"
+           Stretch="Uniform"/>
+            </Grid>
         </Grid>
 
         <!-- ================= CAT ================= -->
